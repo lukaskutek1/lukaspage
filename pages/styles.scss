@@ -1,0 +1,152 @@
+body {
+  margin: 0;
+}
+.App {
+  font-family: sans-serif;
+  text-align: center;
+  background-color: black;
+  background: url("http://getwallpapers.com/wallpaper/full/c/b/0/23460.jpg")
+    no-repeat fixed center;
+  background-size: cover;
+  min-height: 100vh;
+}
+.header {
+  color: white;
+  width: 190px;
+  display: inline-block;
+  margin: auto;
+  padding-top: 30px;
+}
+.headerLogo {
+  width: 50%;
+  float: left;
+}
+.Welcome {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  text-align: center;
+  background-size: cover;
+  color: white;
+}
+.Signin {
+  padding-top: 10px;
+  position: relative;
+  top: 0px;
+  margin: auto;
+  text-align: center;
+  color: #efefef;
+  width: 298px;
+  height: 250px;
+  background-color: rgba(0, 0, 30, 0);
+  border-radius: 8px;
+}
+.links {
+  padding-top: 5px;
+  text-align: left;
+  font-size: 12px;
+}
+.links2 {
+  padding-top: 5px;
+}
+h1 {
+  font-size: 18px;
+}
+
+a {
+  color: #00ccff;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+a:active {
+  color: black;
+}
+
+a:visited {
+  color: #00ccff;
+}
+.checkbox {
+  margin: auto;
+}
+
+.headline {
+  border-bottom: 2px solid #00ccff;
+  margin-bottom: 8px;
+  float: left;
+  margin-left: 0px;
+}
+
+.loginForm {
+  margin-top: 20px;
+  text-align: left;
+}
+.textbox2 {
+  width: 90%;
+  border: none;
+  outline: none;
+  background: none;
+  color: white;
+  font-size: 22px;
+  margin-left: 5px;
+}
+.textbox {
+  width: 90%;
+  border: none;
+  outline: none;
+  background: none;
+  color: white;
+  font-size: 22px;
+  margin-left: 5px;
+}
+.inputField {
+  overflow: hidden;
+  border-bottom: 1px solid #00ccff;
+  margin-bottom: 5px;
+  width: 65%;
+}
+
+.btn {
+  width: 64%;
+  margin: 2px;
+  border: 1px solid #00ccff;
+  background: none;
+  color: white;
+  cursor: pointer;
+}
+
+.icon {
+  width: 12%;
+  margin-bottom: -4px;
+}
+.email {
+  font-size: 16px;
+  width: 90%;
+  border: none;
+  outline: none;
+  background: none;
+  color: white;
+  margin-left: 5px;
+}
+.textboxFormEmail {
+  width: 84%;
+  border: none;
+  outline: none;
+  background: none;
+  color: white;
+  font-size: 18px;
+  margin-left: 3px;
+}
+.textboxForm {
+  width: 83.75%;
+  border: none;
+  outline: none;
+  background: none;
+  color: white;
+  font-size: 18px;
+  margin-left: 5px;
+}
+.notEqual {
+}

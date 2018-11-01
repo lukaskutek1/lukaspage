@@ -1,16 +1,15 @@
-﻿img <img onClick={this.zmenObrazekZpet} className="left-arrow" src="/static/back.svg" />
-
-
-semantic ui tutorial npm install --save semantic-ui-react, install gulp, build gulp,
- _document.js => <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/semantic.min.css" />
- GG
-
- renderForm = type => {
-   if (type === "login") {
-     return <Login changeType={this.changeType} />;
-   } else if (type === "sign") {
-     return <Signup changeType={this.changeType} />;
-   } else if (type === "reset") {
-     return <Reset changeType={this.changeType} />;
-   }
- };
+﻿
+<img
+  width="30px"
+  height="30px;"
+  src="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-arrow-right-b-512.png"
+  className="rightArrow"
+  onClick={this.next}
+/>
+<img
+  width="30px"
+  height="30px;"
+  src="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-arrow-right-b-512.png"
+  className="leftArrow"
+  onClick={this.previous}
+/>

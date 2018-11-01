@@ -1,68 +1,79 @@
+//core
 import React from "react";
-import Login from "./components/login.js";
+//css && semantic-ui
+import "./index.scss";
+//others
+import { Button, Input, Divider } from "semantic-ui-react";
+//import components
 import Header from "./components/header.js";
-import Reset from "./components/reset.js";
-import Signup from "./components/signup.js";
-import "./styles.scss";
+import Slideshow from "./components/slideshow.js";
+import Login from "./components/login.js";
+import Content from "./components/content.js";
+import Lightshow from "./components/lightshow.js";
+const IMG = {
+  1: {
+    url:
+      "http://hopineo.org/wp-content/uploads/hopsolutions/Nikon-D810-Image-Sample-6.jpg"
+  },
+  2: {
+    url:
+      "https://upload.wikimedia.org/wikipedia/commons/e/ef/Mount_Hood_reflected_in_Mirror_Lake%2C_Oregon.jpg"
+  },
+  3: {
+    url: "http://www.jakubhadrava.cz/images/sigpro/lukova_gallery/4.jpg"
+  },
+  4: {
+    url:
+      "https://www.gettyimages.ca/gi-resources/images/Homepage/Hero/UK/CMS_Creative_164657191_Kingfisher.jpg"
+  },
+  5: {
+    url: "placeholder"
+  }
+};
 
-export default class App extends React.Component {
+var bgOpacity = {
+  opacity: "0"
+};
+
+class App extends React.Component {
   state = {
-    name: "",
-    password: "",
-    email: "",
-    odeslano: false,
-    dataPush: true
+    img: IMG,
+    style: {
+      opacity: 1
+    }
   };
-  saveCredentials = (name, password, email) => {
+
+  opacity = () => {
+    let style = { ...this.state.style };
+    style.opacity = style.opacity + 0.05;
     this.setState({
-      name,
-      password,
-      email,
-      odeslano: true
+      style
     });
   };
-  test1() {
-    console.info("test z eventu 1", this);
-  }
-  test2 = () => {
-    console.info("test z eventu 2", this);
-    this.nasledujici();
-  };
-  nasledujici() {
-    console.info("nasledujici", this);
-  }
 
-  // v podstate jednoduche pravidlo je cokoliv pouzijes uvnitr JSX tak musi byt tim () => {} k máš ještě 5 min?
-  // jj p sry
-  // ale u funkci ktere nasleduji uz to nevadi
   render() {
-    const { name, password, email, dataPush, odeslano } = this.state;
-    console.info("sdileny state: ", this.props.shared);
-    // dík ještě little q nazevFce(){} === nazevFce = () => {} ?
-    // je to stejne ale rozdil je v chovani this.
-    // bezpecnejsi je psat nazevFce = () => {} ... tam se to chova vzdy spravne ale je to mene optimalni
-    // musi se to pouzivat pro vsechny eventy kuprikladu tam je jinak this. undefined
     return (
-      <div className="App" onClick={this.test1}>
-        <div className="nevim" onClick={this.test2}>
-          <Header
-            name={name}
-            password={password}
-            email={email}
-            saveCredentials={this.saveCrentials}
-          />
-          {dataPush ? (
-            <Login />
-          ) : (
-            <Signup
-              name={name}
-              password={password}
-              email={email}
-              saveCredentials={this.saveCrentials}
-            />
-          )}
+      <div className="main">
+        <div />
+        <div>
+          <div className="under-header">
+            <div classname="test">
+              <Slideshow img={this.state.img} />
+            </div>
+          </div>
+          <div className="main-row">
+            <div className="main-insider">
+              <Lightshow />
+            </div>
+            <div className="main-content">
+              {" "}
+              <Content />
+            </div>
+          </div>
         </div>
+        <div />
       </div>
     );
   }
 }
+export default App;
